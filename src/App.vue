@@ -7,15 +7,15 @@
             style="position: absolute;top: 0;right: 0;"
         >
             <MenuItem name="home" to="/">首页</MenuItem>
-            <MenuItem name="docs" to="/docs" target="_blank">文档</MenuItem>
-            <MenuItem name="console" to="http://monibuca.com:8081" target="_blank">演示</MenuItem>
+            <MenuItem name="docs" to="http://docs.monibuca.com" target="_blank">文档</MenuItem>
+            <MenuItem name="console" to="http://demo.monibuca.com" target="_blank">演示</MenuItem>
             <Submenu name="plugins">
                 <template slot="title">常用插件</template>
-                <MenuItem name="gateway" target="_blank" to="/docs/plugins.html#网关插件">网关</MenuItem>
-                <MenuItem name="jessica" target="_blank" to="/docs/plugins.html#jessica插件">Jessica</MenuItem>
-                <MenuItem name="cluster" target="_blank" to="/docs/plugins.html#cluster插件">集群</MenuItem>
-                <MenuItem name="rtmp" target="_blank" to="/docs/plugins.html#rtmp插件">RTMP</MenuItem>
-                <MenuItem name="logrotate" target="_blank" to="/docs/plugins.html#日志分割插件">日志分割</MenuItem>
+                <MenuItem name="gateway" target="_blank" to="https://github.com/Monibuca/gatewayplugin">网关</MenuItem>
+                <MenuItem name="jessica" target="_blank" to="https://github.com/Monibuca/jessicaplugin">Jessica</MenuItem>
+                <MenuItem name="cluster" target="_blank" to="https://github.com/Monibuca/clusterplugin">集群</MenuItem>
+                <MenuItem name="rtmp" target="_blank" to="https://github.com/Monibuca/rtmpplugin">RTMP</MenuItem>
+                <MenuItem name="logrotate" target="_blank" to="https://github.com/Monibuca/logrotateplugin">日志分割</MenuItem>
             </Submenu>
             <MenuItem name="4" to="https://plugins.monibuca.com" target="_blank">插件市场</MenuItem>
             <MenuItem name="5" to="about">支持</MenuItem>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-export default {
+export default { 
     name: "app",
     data() {
         return {
