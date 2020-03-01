@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <div>Monibuca v0.4.1</div>
+        <div>Monibuca v1.0.2</div>
         <Menu
             mode="horizontal"
             :active-name="selectedMenu"
@@ -10,7 +10,7 @@
             <MenuItem name="docs" to="/docs" target="_blank">文档</MenuItem>
             <MenuItem name="console" to="/demo">演示</MenuItem>
             <Submenu name="plugins">
-                <template slot="title">内置插件</template>
+                <template slot="title">常用插件</template>
                 <MenuGroup title="发布者/订阅者">
                     <MenuItem name="cluster" target="_blank" to="/docs/plugins.html#cluster插件">集群</MenuItem>
                     <MenuItem name="rtmp" target="_blank" to="/docs/plugins.html#rtmp插件">RTMP</MenuItem>

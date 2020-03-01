@@ -12,25 +12,32 @@
         GITHUB</Button>
     </div>
     <Row style="margin: 30px;">
-      <Col span="8">
+      <Col span="6">
         <Card :bordered="false" style="margin: 30px">
-          <div slot="title" class="feature-title">⚡高性能</div>
+          <div slot="title" class="feature-title">⚡高性能 低功耗</div>
           <div>针对流媒体服务器独特的性质进行的优化，充分利用Golang的goroutine的性质对大量的连接的读写进行合理的分配计算资源，以及尽可能的减少内存Copy操作。使用对象池减少Golang的GC时间。</div>
         </Card>
       </Col>
-      <Col span="8">
+      <Col span="6">
         <Card :bordered="false" style="margin: 30px">
-          <div slot="title" class="feature-title">🔧可扩展</div>
-          <div>流媒体服务器的个性化定制变的更简单，基于Golang语言，开发效率更高，独创的插件机制，可以方便用户定制个性化的功能组合，更高效率的利用服务器资源。</div>
+          <div slot="title" class="feature-title">🔧模块化 可扩展</div>
+          <div>专为二次开发而设计，基于Golang语言，开发效率更高；独创的插件机制，可以方便用户定制个性化的功能组合，更高效率的利用服务器资源。</div>
         </Card>
       </Col>
-      <Col span="8">
+      <Col span="6">
         <Card :bordered="false" style="margin: 30px">
-          <div slot="title" class="feature-title">📈可视化</div>
-          <div>功能强大的仪表盘可以直观的看到服务器运行的状态、消耗的资源、以及其他统计信息。用户可以利用控制台对服务器进行配置和控制。点击右上角菜单栏里面的控制台，可以看到演示。</div>
+          <div slot="title" class="feature-title">📈可视化 易管理</div>
+          <div>功能强大的仪表盘可以直观的看到服务器运行的状态、消耗的资源、以及其他统计信息。用户可以利用控制台对服务器进行配置和控制。点击右上角菜单栏里面的演示，可以看到演示控制台界面。</div>
+        </Card>
+      </Col>
+      <Col span="6">
+        <Card :bordered="false" style="margin: 30px">
+          <div slot="title" class="feature-title">🐹零依赖 易部署</div>
+          <div>纯Go编写，不依赖cgo，不依赖FFMpeg或者其他运行时，部署极其方便，对服务器的要求极为宽松。</div>
         </Card>
       </Col>
     </Row>
+    <img src="../assets/gear.png" width="100%">
   </div>
 </template>
 
