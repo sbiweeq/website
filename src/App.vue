@@ -8,35 +8,14 @@
         >
             <MenuItem name="home" to="/">首页</MenuItem>
             <MenuItem name="docs" to="/docs" target="_blank">文档</MenuItem>
-            <MenuItem name="console" to="/demo">演示</MenuItem>
+            <MenuItem name="console" to="http://monibuca.com:8081" target="_blank">演示</MenuItem>
             <Submenu name="plugins">
                 <template slot="title">常用插件</template>
-                <MenuGroup title="发布者/订阅者">
-                    <MenuItem name="cluster" target="_blank" to="/docs/plugins.html#cluster插件">集群</MenuItem>
-                    <MenuItem name="rtmp" target="_blank" to="/docs/plugins.html#rtmp插件">RTMP</MenuItem>
-                </MenuGroup>
-                <MenuGroup title="订阅者">
-                    <MenuItem
-                        name="jessica"
-                        target="_blank"
-                        to="/docs/plugins.html#jessica插件"
-                    >Jessica</MenuItem>
-                    <MenuItem name="HDL" target="_blank" to="/docs/plugins.html#http-flv插件">Http-Flv</MenuItem>
-                    <MenuItem
-                        name="record"
-                        target="_blank"
-                        to="/docs/plugins.html#recordflv插件"
-                    >录制Flv</MenuItem>
-                </MenuGroup>
-                <MenuGroup title="发布者">
-                    <MenuItem name="HLS" target="_blank" to="/docs/plugins.html#hls插件">HLS</MenuItem>
-                    <MenuItem name="TS" target="_blank" to="/docs/plugins.html#hls插件">TS</MenuItem>
-                </MenuGroup>
-                <MenuGroup title="钩子">
-                    <MenuItem name="Auth" target="_blank" to="/docs/plugins.html#校验插件">验证</MenuItem>
-                    <MenuItem name="QoS">QoS</MenuItem>
-                    <MenuItem name="gateway" target="_blank" to="/docs/plugins.html#网关插件">网关</MenuItem>
-                </MenuGroup>
+                <MenuItem name="gateway" target="_blank" to="/docs/plugins.html#网关插件">网关</MenuItem>
+                <MenuItem name="jessica" target="_blank" to="/docs/plugins.html#jessica插件">Jessica</MenuItem>
+                <MenuItem name="cluster" target="_blank" to="/docs/plugins.html#cluster插件">集群</MenuItem>
+                <MenuItem name="rtmp" target="_blank" to="/docs/plugins.html#rtmp插件">RTMP</MenuItem>
+                <MenuItem name="logrotate" target="_blank" to="/docs/plugins.html#日志分割插件">日志分割</MenuItem>
             </Submenu>
             <MenuItem name="4" to="https://plugins.monibuca.com" target="_blank">插件市场</MenuItem>
             <MenuItem name="5" to="about">支持</MenuItem>
