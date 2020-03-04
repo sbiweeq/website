@@ -1,10 +1,12 @@
 <template>
   <div>
+    
     <img src="../assets/logo.png">
     <div>
       <p>
         Monibuca 是一个开源的Go语言实现的流媒体服务器开发框架
       </p>
+       <div style="margin-bottom:10px">Monibuca 引擎 + 插件 = 定制化流媒体服务器</div>
       <Button type="success" to="/docs" target="_blank">🚀START</Button>
       <span style="margin: 0 10px"></span>
       <Button type="default" target="_blank" to="https://github.com/Monibuca">
@@ -37,7 +39,10 @@
         </Card>
       </Col>
     </Row>
-    <img src="../assets/gear.png" width="100%">
+    <div id="content">
+            <div :id="'shadow'+(16-n)" v-for="n in 15" :key="n" class="shadow"></div>
+            <div :id="'gear'+(16-m)" v-for="m in 15" :key="m+16"></div>
+        </div>
   </div>
 </template>
 
@@ -45,6 +50,7 @@
 
 </script>
 <style scoped>
+@import url('../assets/zzsc.css');
   .feature-title{
     color: #eb5e46;
     font-weight: bold;
