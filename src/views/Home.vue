@@ -42,12 +42,18 @@
     <div id="content">
             <div :id="'shadow'+(16-n)" v-for="n in 15" :key="n" class="shadow"></div>
             <div :id="'gear'+(16-m)" v-for="m in 15" :key="m+16"></div>
-        </div>
+        </div><struct/>
   </div>
+  
 </template>
 
 <script>
-
+import struct from "../components/struct"
+export default{
+  components:{
+    struct
+  }
+}
 </script>
 <style scoped>
 @import url('../assets/zzsc.css');
