@@ -8,6 +8,8 @@
     </p>
     <img src="../assets/alipay.png">
     <img src="../assets/wechat.jpg">
+    <Divider>特别鸣谢</Divider>
+    <Tag color="cyan">Sense</Tag>
   </div>
 </template>
 <style scoped>
