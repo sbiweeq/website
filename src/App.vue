@@ -1,21 +1,19 @@
 <template>
     <div id="app">
-        <div>Monibuca v1.1.0</div>
-        <Menu
-            mode="horizontal"
-            :active-name="selectedMenu"
-            style="position: fixed;top: 0;right: 0;"
-        >
+        <div>Monibuca v1.1.1</div>
+        <Menu mode="horizontal" :active-name="selectedMenu" style="position: fixed;top: 0;right: 0;">
             <MenuItem name="home" to="/">首页</MenuItem>
             <MenuItem name="docs" to="http://docs.monibuca.com" target="_blank">文档</MenuItem>
             <MenuItem name="console" to="http://demo.monibuca.com" target="_blank">演示</MenuItem>
             <Submenu name="plugins">
                 <template slot="title">常用插件</template>
                 <MenuItem name="gateway" target="_blank" to="https://github.com/Monibuca/gatewayplugin">网关</MenuItem>
-                <MenuItem name="jessica" target="_blank" to="https://github.com/Monibuca/jessicaplugin">Jessica</MenuItem>
+                <MenuItem name="jessica" target="_blank" to="https://github.com/Monibuca/jessicaplugin">Jessica
+                </MenuItem>
                 <MenuItem name="cluster" target="_blank" to="https://github.com/Monibuca/clusterplugin">集群</MenuItem>
                 <MenuItem name="rtmp" target="_blank" to="https://github.com/Monibuca/rtmpplugin">RTMP</MenuItem>
-                <MenuItem name="logrotate" target="_blank" to="https://github.com/Monibuca/logrotateplugin">日志分割</MenuItem>
+                <MenuItem name="logrotate" target="_blank" to="https://github.com/Monibuca/logrotateplugin">日志分割
+                </MenuItem>
             </Submenu>
             <MenuItem name="4" to="https://plugins.monibuca.com" target="_blank">插件市场</MenuItem>
             <MenuItem name="5" to="about">支持</MenuItem>
@@ -26,7 +24,7 @@
 </template>
 
 <script>
-export default { 
+export default {
     name: "app",
     data() {
         return {
@@ -60,29 +58,29 @@ html {
 .content {
     padding-top: 60px;
 }
-#shadow14:after{
+#shadow14:after {
     content: "Engine";
     position: relative;
     z-index: 100;
 }
-#shadow15:after{
+#shadow15:after {
     content: "RTMP";
     position: relative;
     z-index: 100;
 }
-#shadow12:after{
+#shadow12:after {
     content: "HDL";
     position: relative;
     z-index: 100;
 }
-#shadow11:after{
+#shadow11:after {
     content: "HLS";
     position: relative;
-     z-index: 100;
+    z-index: 100;
 }
-#shadow10:after{
+#shadow10:after {
     content: "WebSocket";
     position: relative;
-     z-index: 100;
+    z-index: 100;
 }
 </style>
