@@ -1,22 +1,30 @@
 <template>
     <div id="app">
         <div>Monibuca v1.1.1</div>
-        <Menu mode="horizontal" :active-name="selectedMenu" style="position: fixed;top: 0;right: 0;">
-            <MenuItem name="home" to="/">首页</MenuItem>
-            <MenuItem name="docs" to="http://docs.monibuca.com" target="_blank">文档</MenuItem>
-            <MenuItem name="console" to="http://demo.monibuca.com" target="_blank">演示</MenuItem>
+        <Menu mode="horizontal" :active-name="selectedMenu" @on-select="onMenuSelect"
+            style="position: fixed;top: 0;right: 0;">
+            <MenuItem name="home" to="/">{{$t('menu.home')}}</MenuItem>
+            <MenuItem name="docs" to="http://docs.monibuca.com" target="_blank">{{$t('menu.docs')}}</MenuItem>
+            <MenuItem name="console" to="http://demo.monibuca.com" target="_blank">{{$t('menu.demo')}}</MenuItem>
             <Submenu name="plugins">
-                <template slot="title">常用插件</template>
-                <MenuItem name="gateway" target="_blank" to="https://github.com/Monibuca/gatewayplugin">网关</MenuItem>
+                <template slot="title">{{$t('menu.plugins')}}</template>
+                <MenuItem name="gateway" target="_blank" to="https://github.com/Monibuca/gatewayplugin">gateway
+                </MenuItem>
                 <MenuItem name="jessica" target="_blank" to="https://github.com/Monibuca/jessicaplugin">Jessica
                 </MenuItem>
-                <MenuItem name="cluster" target="_blank" to="https://github.com/Monibuca/clusterplugin">集群</MenuItem>
+                <MenuItem name="cluster" target="_blank" to="https://github.com/Monibuca/clusterplugin">cluster
+                </MenuItem>
                 <MenuItem name="rtmp" target="_blank" to="https://github.com/Monibuca/rtmpplugin">RTMP</MenuItem>
-                <MenuItem name="logrotate" target="_blank" to="https://github.com/Monibuca/logrotateplugin">日志分割
+                <MenuItem name="logrotate" target="_blank" to="https://github.com/Monibuca/logrotateplugin">logrotate
                 </MenuItem>
             </Submenu>
-            <MenuItem name="4" to="https://plugins.monibuca.com" target="_blank">插件市场</MenuItem>
-            <MenuItem name="5" to="about">支持</MenuItem>
+            <MenuItem name="market" to="https://plugins.monibuca.com" target="_blank">{{$t('menu.market')}}</MenuItem>
+            <MenuItem name="about" to="about">{{$t('menu.support')}}</MenuItem>
+            <Submenu name="language">
+                <template slot="title">{{$t('menu.language')}}</template>
+                <MenuItem name="zh">中文</MenuItem>
+                <MenuItem name="en">English</MenuItem>
+            </Submenu>
         </Menu>
         <router-view class="content"></router-view>
         <div>Copyright © 2019-2020 dexter 苏ICP备20001212号</div>
@@ -30,6 +38,22 @@ export default {
         return {
             selectedMenu: "home"
         };
+    },
+    mounted() {
+        let lang = navigator.language || navigator.userLanguage;
+        lang = lang.substr(0, 2);
+        if (lang != "zh") {
+            this.$i18n.locale = "en";
+        }
+    },
+    methods: {
+        onMenuSelect(name) {
+            switch (name) {
+                case "en":
+                case "zh":
+                    this.$i18n.locale = name;
+            }
+        }
     }
 };
 </script>

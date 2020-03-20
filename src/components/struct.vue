@@ -55,7 +55,7 @@
             <rect stroke="#000" id="svg_25" height="48" width="120.00001" y="82.45313" x="38" stroke-width="1.5"
                 fill="#fff" />
             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="19"
-                id="svg_26" y="112.45313" x="70" stroke-width="0" stroke="#000" fill="#000000">推流器</text>
+                id="svg_26" y="112.45313" x="70" stroke-width="0" stroke="#000" fill="#000000">{{$t('g.pusher')}}</text>
             <line id="svg_27" y2="115.45313" x2="258.00001" y1="106.45313" x1="165" stroke-width="7" stroke="#000"
                 fill="none" />
             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="19"
@@ -73,15 +73,17 @@
             <rect id="svg_34" height="53" width="118.00001" y="161.45314" x="802.00005" stroke-width="1.5" stroke="#000"
                 fill="#fff" />
             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="19"
-                id="svg_35" y="194.45314" x="833.00006" stroke-width="0" stroke="#000" fill="#000000">播放器</text>
+                id="svg_35" y="194.45314" x="833.00006" stroke-width="0" stroke="#000"
+                fill="#000000">{{$t('g.player')}}</text>
             <rect id="svg_36" height="52" width="121.00001" y="237.45314" x="798.00005" stroke-width="1.5" stroke="#000"
                 fill="#fff" />
             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="19"
-                id="svg_37" y="270.45315" x="832.00006" stroke-width="0" stroke="#000" fill="#000000">控制台</text>
+                id="svg_37" y="270.45315" x="832.00006" stroke-width="0" stroke="#000"
+                fill="#000000">{{$t('g.dashboard')}}</text>
             <rect stroke="#000" id="svg_38" height="48" width="120.00001" y="161.45314" x="37" stroke-width="1.5"
                 fill="#fff" />
             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="19"
-                id="svg_39" y="193.45314" x="50" stroke-width="0" stroke="#000" fill="#000000">监控摄像头</text>
+                id="svg_39" y="193.45314" x="50" stroke-width="0" stroke="#000" fill="#000000">{{$t('g.camera')}}</text>
             <line stroke="#000" id="svg_40" y2="190.45314" x2="258.00001" y1="184.45314" x1="164" stroke-width="7"
                 fill="none" />
             <line stroke="#000" id="svg_41" y2="190" x2="795.00007" y1="186.45314" x1="724.00006" stroke-width="7"

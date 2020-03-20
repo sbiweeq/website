@@ -1,0 +1,34 @@
+{
+    "menu": {
+        "home": "Home",
+        "docs": "Docs",
+        "demo": "Demo",
+        "plugins": "Plugins",
+        "market": "Market",
+        "support": "Sponsor",
+        "language": "Language"
+    },
+    "slogan": "is an open source development framework of streaming server implemented by golang",
+    "slogan2": "Monibuca engine + plugins = customized streaming server",
+    "feature": {
+        "title1": "⚡High performance",
+        "feature1": "Make full use of the characteristics of goroutine of golang to allocate computing resources reasonably for reading and writing of a large number of connections",
+        "title2": "🧩Modular and scalable",
+        "feature2": "Specially designed for secondary development, based on the golang language, the development efficiency is higher; the original plug-in mechanism can facilitate users to customize personalized function combination, and make more efficient use of server resources.",
+        "title3": "📈Visual and easy to manage",
+        "feature3": "The powerful dashboard can intuitively see the status of server operation, consumed resources, and other statistics. Users can use the console to configure and control the server. Click the demo in the menu bar in the upper right corner to see the demo console interface.",
+        "title4": "🐹Zero dependency and easy deployment",
+        "feature4": "Pure go writing, independent of CGO, independent of ffmpeg or other runtime, is extremely convenient to deploy and requires a very loose server."
+    },
+    "g": {
+        "pusher": "Pusher",
+        "player": "Player",
+        "camera": "Camera",
+        "dashboard": "Dashboard"
+    },
+    "about": {
+        "title": "Sponsor Monibuca",
+        "desc": "Monibuca is an open source project licensed by gpl3, which is free of charge. However, with the increase of project scale, it also needs the corresponding financial support to continue the development of project maintenance. You can sponsor the development of monibuca in the following ways.",
+        "sponsor": "Sponsor"
+    }
+}
