@@ -59,6 +59,14 @@ export default {
 </script>
 
 <style>
+@keyframes linena {
+    from {
+        stroke-dashoffset: 50;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
 body,
 html {
     height: 100%;

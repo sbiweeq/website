@@ -29,16 +29,25 @@
             <div :id="'shadow'+(16-n)" v-for="n in 15" :key="n" class="shadow"></div>
             <div :id="'gear'+(16-m)" v-for="m in 15" :key="m+16"></div>
         </div>
-        <struct />
+        <Tabs  type="card" >
+            <TabPane label="single">
+                <struct />
+            </TabPane>
+            <TabPane label="cluster">
+                 <cluster/>
+            </TabPane>
+        </Tabs>
     </div>
 
 </template>
 
 <script>
 import struct from "../components/struct";
+import cluster from "../components/cluster";
 export default {
     components: {
-        struct
+        struct,
+        cluster
     }
 };
 </script>
