@@ -26,6 +26,22 @@
                     </path>
                 </template>
             </template>
+            <template v-for="(subscriber,i) in subscribers">
+                <template v-for="(p,index) in subscriber">
+                    <rect fill="#fff" :key="index+'rs'+i" stroke="#000" :y="i*lineheight+yOffsetSub"
+                        :x="getSubscriberAfterWidth(i,index)" height="33" :width="p.bbox.width+20" />
+                    <text :ref="index+'ts'+i" stroke-width="0" :key="index+'ts'+i" :x="getSubscriberAfterWidth(i,index)+10"
+                        :y="i*lineheight+20+yOffsetSub" fill="#000000" stroke="#000">{{p.label}}</text>
+                    <line :key="index+'ls'+i" stroke="#000" stroke-width="7"
+                        :x1="getSubscriberAfterWidth(i,index)+p.bbox.width+20" :y1="i*lineheight+yOffsetSub+15"
+                        :x2="getSubscriberAfterWidth(i,index)+p.bbox.width+50" :y2="i*lineheight+yOffsetSub+15"
+                        v-if="index!=subscriber.length-1" />
+                    <path stroke-dasharray='10, 10, 5' stroke="black" fill="#fff" stroke-width="7" :d="getPathSub(i)"
+                        :key="index+'ps'+i">
+                        <animate attributeName="stroke-dashoffset" values="50;0" dur="2s" repeatCount="indefinite" />
+                    </path>
+                </template>
+            </template>
             <ellipse ry="49.5" rx="49.5" id="svg_2" cy="200" cx="500" stroke-width="1.5" stroke="#000" fill="#fff" />
             <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24"
                 id="svg_3" y="206.45313" x="464" stroke-width="0" stroke="#000" fill="#000000">engine</text>
@@ -40,17 +56,25 @@
 </template>
 
 <script>
-// const single = require("toml!../assets/single.toml")
-// console.log(single)
 export default {
     data() {
         return {
             lineheight: 60,
             publishers: [
                 [{ label: "Pusher" }, { label: "🧩rtmp" }],
+                [{ label: "camera" }, { label: "🧩rtsp" }],
                 [{ label: "m3u8" }, { label: "🧩hls" }, { label: "🧩ts" }]
+            ].map(x => x.map(y => ((y.bbox = {}), y))),
+            subscribers: [
+                [{ label: "🧩hdl" }, { label: "cdn" }],
+                [{ label: "🧩jessica" }, { label: "Player" }],
+                [{ label: "🧩gateway" }, { label: "dashboard" }],
+                [{ label: "🧩record" }, { label: "flv files" }]
             ].map(x => x.map(y => ((y.bbox = {}), y)))
         };
+    },
+    props:{
+        selectedPublisher:Array
     },
     mounted() {
         for (var i = 0; i < this.publishers.length; i++) {
@@ -60,12 +84,26 @@ export default {
                 ][0].getBBox();
             }
         }
+        for (i = 0; i < this.subscribers.length; i++) {
+            for (j = 0; j < this.subscribers[i].length; j++) {
+                this.subscribers[i][j].bbox = this.$refs[
+                    j + "ts" + i
+                ][0].getBBox();
+            }
+        }
     },
     computed: {
         yOffset() {
             return (
                 200 -
                 (this.publishers.length * this.lineheight) / 2 +
+                (this.lineheight - 33) / 2
+            );
+        },
+        yOffsetSub(){
+return (
+                200 -
+                (this.subscribers.length * this.lineheight) / 2 +
                 (this.lineheight - 33) / 2
             );
         }
@@ -78,18 +116,38 @@ export default {
             }
             return result;
         },
+        getAfterWidthSub(i, j) {
+            var result =0;
+            for (var k = 0; k < j; k++) {
+                result += this.subscribers[i][k].bbox.width + 50;
+            }
+            return result;
+        },
         getPublisherAfterWidth(i, j) {
             return 370 - this.getAfterWidth(i, j);
         },
+        getSubscriberAfterWidth(i,j){
+            return 620 + this.getAfterWidthSub(i, j);
+        },
         getPath(i) {
-            var h = 200 - (this.yOffset + i * this.lineheight + 15);
+            var h = ((this.publishers.length-1-2*i) * this.lineheight )*0.3;
             return (
-                "m400," +
+                "m390," +
                 (this.yOffset + i * this.lineheight + 15) +
-                "c50,0 0," +
+                "c30,0 "+ (60-30) +"," +
                 h +
-                " 50," +
+                " 60," +
                 h
+            );
+        },
+        getPathSub(i) {
+            var h = ((this.subscribers.length-1-2*i) * this.lineheight )*0.3;
+            return (
+                "m560," +(this.yOffsetSub + i * this.lineheight + 15+h)+
+                "c30,0 "+ (60-30) +"," +
+                -h +
+                " 60," +
+                -h
             );
         }
     }
