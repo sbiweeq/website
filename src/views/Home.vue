@@ -29,12 +29,29 @@
             <div :id="'shadow'+(16-n)" v-for="n in 15" :key="n" class="shadow"></div>
             <div :id="'gear'+(16-m)" v-for="m in 15" :key="m+16"></div>
         </div>
-        <Tabs  type="card" >
+        <Tabs type="card">
             <TabPane label="single">
-                <struct />
+                Publisher Plugins:
+                <CheckboxGroup v-model="publishers">
+                    <Checkbox label="rtmp" border></Checkbox>
+                    <Checkbox label="rtsp" border></Checkbox>
+                    <Checkbox label="hls" border></Checkbox>
+                    <Checkbox label="ts" border></Checkbox>
+                    <Checkbox label="record" border></Checkbox>
+                </CheckboxGroup>
+                Subscribers Plugins:
+                <CheckboxGroup v-model="subscribers">
+                    <Checkbox label="rtmp" border></Checkbox>
+                    <Checkbox label="jessica" border></Checkbox>
+                    <Checkbox label="hdl" border></Checkbox>
+                    <Checkbox label="record" border></Checkbox>
+                    <Checkbox label="hls" border></Checkbox>
+                    <Checkbox label="gateway" border></Checkbox>
+                </CheckboxGroup>
+                <struct :selectedPubs="publishers" :selectedSubs="subscribers" />
             </TabPane>
             <TabPane label="cluster">
-                 <cluster/>
+                <cluster />
             </TabPane>
         </Tabs>
     </div>
@@ -45,6 +62,12 @@
 import struct from "../components/struct";
 import cluster from "../components/cluster";
 export default {
+    data() {
+        return {
+            publishers: ["rtmp", "rtsp", "hls", "ts", "record"],
+            subscribers: ["rtmp", "jessica", "hdl", "record", "hls", "gateway"]
+        };
+    },
     components: {
         struct,
         cluster
