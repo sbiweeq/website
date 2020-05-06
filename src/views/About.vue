@@ -12,6 +12,10 @@
         </div>
         <Divider> {{$t('about.sponsor')}}</Divider>
         <Tag color="cyan">Sense</Tag>
+        <Tag color="cyan">hshev99</Tag>
+        <Tag color="cyan">兵</Tag>
+        <Tag color="cyan">Leon</Tag>
+        <Tag color="cyan">Jack</Tag>
     </div>
 </template>
 <style scoped>
