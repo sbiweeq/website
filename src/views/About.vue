@@ -16,6 +16,7 @@
         <Tag color="cyan">兵</Tag>
         <Tag color="cyan">Leon</Tag>
         <Tag color="cyan">Jack</Tag>
+        <Tag color="cyan">天空</Tag>
     </div>
 </template>
 <style scoped>
