@@ -38,6 +38,7 @@
                     <Checkbox label="hls" border></Checkbox>
                     <Checkbox label="ts" border></Checkbox>
                     <Checkbox label="record" border></Checkbox>
+                    <Checkbox label="webrtc" border></Checkbox>
                 </CheckboxGroup>
                 Subscribers Plugins:
                 <CheckboxGroup v-model="subscribers">
@@ -64,7 +65,7 @@ import cluster from "../components/cluster";
 export default {
     data() {
         return {
-            publishers: ["rtmp", "rtsp", "hls", "ts", "record"],
+            publishers: ["rtmp", "rtsp", "hls", "ts", "record","webrtc"],
             subscribers: ["rtmp", "jessica", "hdl", "record", "hls", "gateway"]
         };
     },
