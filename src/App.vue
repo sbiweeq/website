@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <div>Monibuca v2.0.0</div>
+        <div>Monibuca v2.1.1</div>
         <Menu mode="horizontal" :active-name="selectedMenu" @on-select="onMenuSelect"
             style="position: fixed;top: 0;right: 0;">
             <MenuItem name="home" to="/">{{$t('menu.home')}}</MenuItem>
