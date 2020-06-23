@@ -16,6 +16,10 @@
                 </svg>
                 GITHUB
             </Button>
+            <span style="margin: 0 10px"></span>
+            <Button target="_blank" to="https://live.oschina.net/detail/l_5ec359168fca5_6CA0rArq/4?fromH5=true">直播回顾</Button>
+            <span style="margin: 0 10px"></span>
+            <Button target="_blank" to="https://www.infoq.cn/article/uiPl8dIuQmhipKb3q3Tz">Info文章</Button>
         </div>
         <Row style="margin: 30px;">
             <Col span="6" v-for="n in 4" :key="n">
