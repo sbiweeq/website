@@ -1,4 +1,18 @@
 module.exports = {
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [
+      ]
+    }
+  },
+  css: {
+    loaderOptions: {
+      less:{
+        javascriptEnabled: true
+      }
+    }
+  },
   chainWebpack: config => {
     config.module
         .rule('vue')

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="../assets/logo.png" style="width:256px;height:256px"/>
+        <img src="../assets/logo.png" style="width:256px"/>
         <div>
             <p>Monibuca {{$t('slogan')}}</p>
             <div style="margin:10px">{{$t('slogan2')}}</div>
@@ -79,10 +79,11 @@ export default {
     }
 };
 </script>
+
 <style scoped>
 @import url("../assets/zzsc.css");
 .feature-title {
-    color: #eb5e46;
+    color: #ff2351;
     font-weight: bold;
     font-size: larger;
 }

@@ -76,7 +76,6 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #184c18;
     position: relative;
     height: 100%;
 }
