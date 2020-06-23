@@ -1,9 +1,9 @@
 <template>
     <div>
-        <img src="../assets/logo.png" />
+        <img src="../assets/logo.png" style="width:256px;height:256px"/>
         <div>
             <p>Monibuca {{$t('slogan')}}</p>
-            <div style="margin-bottom:10px">{{$t('slogan2')}}</div>
+            <div style="margin:10px">{{$t('slogan2')}}</div>
             <Button type="success" to="http://docs.monibuca.com" target="_blank">🚀START</Button>
             <span style="margin: 0 10px"></span>
             <Button type="default" target="_blank" to="https://github.com/Monibuca">
@@ -87,10 +87,6 @@ export default {
     font-size: larger;
 }
 p {
-    margin: 30px;
     font-size: 20px;
-}
-img {
-    margin: 20px;
 }
 </style>
