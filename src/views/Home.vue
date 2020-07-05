@@ -52,6 +52,7 @@
                     <Checkbox label="record" border></Checkbox>
                     <Checkbox label="hls" border></Checkbox>
                     <Checkbox label="gateway" border></Checkbox>
+                    <Checkbox label="webrtc" border></Checkbox>
                 </CheckboxGroup>
                 <struct :selectedPubs="publishers" :selectedSubs="subscribers" />
             </TabPane>
@@ -70,7 +71,7 @@ export default {
     data() {
         return {
             publishers: ["rtmp", "rtsp", "hls", "ts", "record","webrtc"],
-            subscribers: ["rtmp", "jessica", "hdl", "record", "hls", "gateway"]
+            subscribers: ["rtmp", "jessica", "hdl", "record", "hls", "gateway","webrtc"]
         };
     },
     components: {

@@ -77,7 +77,8 @@ const subscribers = [
     [{ label: "gateway" ,pull:true}, { label: "dashboard",pull:true }],
     [{ label: "record" }, { label: "flv files" }],
     [{ label: "hls" }, { label: "m3u8 and ts files" }],
-    [{ label: "rtmp" ,pull:true}, { label: "Player" ,pull:true}]
+    [{ label: "rtmp" ,pull:true}, { label: "Player" ,pull:true}],
+    [{ label: "webrtc" ,pull:true}, { label: "chrome" ,pull:true}]
 ].map(x => x.map(y => ((y.bbox = { width: 0 }), y)));
 export default {
     data() {
